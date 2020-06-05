@@ -89,7 +89,7 @@ describe('meta-viewport', function() {
 				'<meta name="viewport" content="user-scalable=1, minimal-ui">';
 			var node = fixture.querySelector('meta');
 
-			assert.isTrue(axe.testUtils.getCheckEvaluate('meta-viewport')(node));
+			assert.isTrue(checks['meta-viewport'].evaluate.call(checkContext, node));
 		});
 	});
 
